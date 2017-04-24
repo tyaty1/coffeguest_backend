@@ -14,7 +14,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
-   $g= $faker->randomElement(['male','famele']);
+   $g= $faker->randomElement(['male','femele']);
 
     return [
         'name' => $faker->name($g),
@@ -45,7 +45,7 @@ $factory->define(App\Review::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence,
         'body'=> $faker->paragraph,
-        //'recommended' => $faker->randomElement(NULL,0,1),
+        'recommended' => $faker->numberBetween(1,5),
 
     ];
 });

@@ -22,7 +22,7 @@ class ReviewController extends Controller
 		$rev->title 		= $r->get('Title');
 		$rev->body 			= $r->get('Body');
 		$recommended = $r->get('Recommended');
-			if($recommended)
+			if($recommended>=1||$recommended<=5)
 			{
 				$rev->recommended	= $recommended;
 			}

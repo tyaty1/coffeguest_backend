@@ -19,6 +19,8 @@ class CreateCafesTable extends Migration
             $table->string('name');
             $table->decimal('geo_latitude',8,5);
             $table->decimal('geo_longitude',8,5); 
+            $table->string('logo_path')->nullable();
+            $table->binary('data')->nullable();
         });
     }
 

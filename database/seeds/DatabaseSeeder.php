@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             factory(App\Event::class, 20)->create();
 
         		echo 'h1';
-        	factory(App\Cafe::class, 100)->create()->each(function($y){
+        	factory(App\Cafe::class, 50)->create()->each(function($y){
         		           		$ran=App\Review::all()->random(5);
            	           		foreach ($ran as $key => $value) {
            	           			$b[]=$value;           	           		

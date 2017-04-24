@@ -23,7 +23,7 @@ $api->version('v1', function (Router $api) {
         $api->get('favorite/cafe/{cid}','App\\Api\\V1\\Controllers\\CafeController@fav' );
         $api->get('favorite/user/{uid}','App\\Api\\V1\\Controllers\\UserController@fav' );
         $api->get('favorite/user/','App\\Api\\V1\\Controllers\\UserController@fav_cur' );
-        //$api->get('cafe/query/{args}','App\\Api\\V1\\Controllers\\CafeController@query' );
+        //$api->post('query/{args}','App\\Api\\V1\\Controllers\\QueryController@query' );
         $api->get('review/user','App\\Api\\V1\\Controllers\\CafeController@reviews_by_cur_user' );
         $api->get('review/user/{uid}','App\\Api\\V1\\Controllers\\UserController@reviews_by_user' );
         //$api->get('review/cafe/{cid}','App\\Api\\V1\\Controllers\\ReviewController@reviews_by_cafe' );
