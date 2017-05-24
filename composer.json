@@ -11,7 +11,11 @@
         "dingo/api": "1.0.x@dev",
         "barryvdh/laravel-cors": "^0.8.2",
         "laravel/socialite": "^3.0",
-        "adamwathan/eloquent-oauth-l5": "^0.5.2"
+        "adamwathan/eloquent-oauth-l5": "^0.5.2",
+        "intervention/image": "^2.3",
+        "edujugon/push-notification": "^2.1",
+        "cornford/googlmapper": "2.*",
+        "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

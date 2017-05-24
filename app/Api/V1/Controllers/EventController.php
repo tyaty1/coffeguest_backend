@@ -2,25 +2,33 @@
 
 namespace App\Api\V1\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+
+use Config;
 use JWTAuth;
-use App\event_base_free(event_base);
+use App\Http\Controllers\Controller;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Dingo\Api\Routing\Helpers;
+
+
+//use App\event_base_free(event_base);
+use App\Event;
+
 
 class EventController extends Controller
 {
 	use Helpers;
-    public function index()
-    {
+    public function list()
+    { //resposnse()->json(['g']);
 
 
-		$event=Event::oderBy('start')->get();
+		$event=Event::all();
+
 		if($event){
-			return resposnse()->json($event)
+			return response()->json($event);
 		}
 		else{
-			$this->response->error('No events',500);
+			throw new HttpException(500);
+
 		}
 
     }

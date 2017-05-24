@@ -8,7 +8,9 @@ return [
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
-            'sex' => 'string'
+            'sex' => 'string|in:male,female',
+            'profilePicture ' => 'file|image',
+            'birth_date' => 'date'
         ]
     ],
         'review' => [

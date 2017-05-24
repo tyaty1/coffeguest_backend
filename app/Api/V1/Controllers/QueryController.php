@@ -9,23 +9,20 @@ use Illuminate\Support\Facades\DB;
 use JWTAuth;
 use App\Review;
 use Dingo\Api\Routing\Helpers;
+use App\Api\V1\Controllers\CafeController;
 
 class QueryController extends Controller
 {
 	use Helpers;
-    public function db_select_raw(Request $q)
+    public function serach(Request $q)
     {
     	//$user = JWTAuth::parseToken()->authenticate();
 
-    	$raw=$q->get('Raw');
-    	if($raw){
-    	$output=DB::select($raw);
+    	$cat=$q->get('Catgory');
+    	$arg=$q->get('Value');
+    	if ($cat=='Nearby'){
 
-    	return response()->json($output);
-		}
-	else{
-		$this->response->error('No query',500);
-		}
+    	}
 
     }
 }

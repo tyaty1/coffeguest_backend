@@ -1,0 +1,37 @@
+@mixin flex-margin-horzontal($viewport,$margin){
+	 margin-left:  calc(100% * calc($margin/$viewport));
+	 margin-right:  calc(100% * calc($margin/$viewport));
+
+}
+@mixin flex-padding-horzontal($viewport,$margin){
+	 padding-left:  calc(100% * calc($margin/$viewport));
+	 padding-right:  calc(100% * calc($margin/$viewport));
+
+}
+@mixin flex-font($viewport,$size){
+	font-size: $size+px;
+	$a:100vw;
+	$b:$viewport/$size;
+	$v:$a/$b;
+
+		@media screen and (max-width: $viewport+px){
+		font-size: $v;
+	}	
+
+}
+@mixin input-ph{
+	&::-webkit-input-placeholder{
+		@content;
+	}
+	&:-moz-placeholder{
+		@content;
+	}
+	&:-ms-input-placeholder{
+		@content;
+	}
+	&::-moz-placeholder{
+		@content;
+	}
+
+
+}

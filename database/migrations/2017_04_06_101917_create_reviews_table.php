@@ -18,8 +18,8 @@ class CreateReviewsTable extends Migration
             $table->timestamps();
             $table->integer('user_id')->default(-1);
             $table->integer('cafe_id')->default(-1);
-            $table->string('title');
-            $table->longtext('body');
+            $table->string('title')->nullable();
+            $table->longtext('body')->nullable();
             $table->tinyInteger('recommended')->default(-1);
         });
     }

@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Coffeguest',
 
     /*
     |--------------------------------------------------------------------------
@@ -162,6 +162,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
        
 
         /*
@@ -173,6 +174,14 @@ return [
         Barryvdh\Cors\ServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Edujugon\PushNotification\Providers\PushNotificationServiceProvider::class,
+        Cornford\Googlmapper\MapperServiceProvider::class,
+
+
+
+
+
 
         /*
          * Application Service Providers...
@@ -239,6 +248,12 @@ return [
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'SocialAuth' => AdamWathan\EloquentOAuth\Facades\OAuth::class,
+        'ImageCon' => Intervention\Image\Facades\Image::class,
+        'PushNotification' => Edujugon\PushNotification\Facades\PushNotification::class,
+        'Mapper'         => Cornford\Googlmapper\Facades\MapperFacade::class
+
+
+
     ],
 
 ];

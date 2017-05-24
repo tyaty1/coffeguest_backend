@@ -44,6 +44,6 @@ return [
 'facebook' => [
     'client_id' => env('FB_KEY'),
     'client_secret' => env('FB_SECRET'),
-    'redirect' => 'http://cafe-rest.localhost/api/auth/facebook/login',
+    'redirect' => env('APP_FBR_URL'),
 ],
 ];

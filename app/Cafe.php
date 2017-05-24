@@ -20,6 +20,10 @@ class Cafe extends Model
     		public function events(){
     			return $this->hasMany('App\Event');
     		}
+            public function images(){
+                return $this->hasMany('App\Image');
+    }
+
             
 
 }

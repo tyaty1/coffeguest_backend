@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         //echo 'h';
             factory(App\Review::class, 500)->create();
             factory(App\Event::class, 20)->create();
+            factory(App\Image::class, 150)->create();
 
         		echo 'h1';
         	factory(App\Cafe::class, 50)->create()->each(function($y){
@@ -25,6 +26,11 @@ class DatabaseSeeder extends Seeder
            	           			$b[]=$value;           	           		
            	           		}          	       		
    				$y->reviews()->saveMany($b);
+          $img=App\Image::where([['cafe_id',-1],['user_id',-1]])->get()->random(1)->first();
+          $img->cafe_id=$y->id;
+          $y->profile_image_id=$img->id;
+          $y->save();
+          $img->save();
 
         	});
         		echo 'h2';
@@ -40,6 +46,13 @@ class DatabaseSeeder extends Seeder
            	           		}
            	           		//var_dump($a);
    				$x->favorite_cafes()->attach($a);
+          $uimg=App\Image::where([['is_avatar','=',0],['cafe_id','=',-1],['user_id','=',-1]])->first();
+          $uimg->user_id=$x->id;
+          $uimg->is_avatar=1;
+          $x->avatar_id=$uimg->id;
+          $x->save();
+          $uimg->save();
+
            		
            		$ran=App\Review::all()->random(5);
            	           		foreach ($ran as $key => $value) {
@@ -77,6 +90,8 @@ class DatabaseSeeder extends Seeder
    				}
 
    			});
+
+
 
 
 

@@ -1,9 +1,111 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600); */
+@import "fonts";
 
 // Variables
 @import "variables";
+@import "mixins";
+
+//Pages
+@import "navbar-custom";
+@import "temp";
+@import "profile";
+
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body{
+
+	font-family: "San Francisco","Open Sans",sans-serif;  
+	
+
+	background-color: black;
+	//font-size: 12;
+	min-width: 320px;
+	background-image: url('/img/bg.png');
+	//background-attachment: fixed;
+	//background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+//Register Form
+
+
+	.container.register{
+		//Font
+		font-weight: 400;
+
+		.form-icon{
+			padding-right: calc(100% * calc(15/767));
+			padding-left: calc(100% * calc(15/767));
+
+			img{
+				//padding: 0px;
+				//padding: calc(100% * 0.01955671447);
+
+				}
+			}
+		
+		.panel.panel-default{
+			background-color:transparent;
+		
+		.form-icon{
+			text-align: right;
+			@media screen and (max-width: 767px){
+				//padding-right: calc(100% * calc(15/767));
+				//padding-left: calc(100% * calc(15/767));
+				@include flex-margin-horzontal(767,15);
+				@include flex-padding-horzontal(767,15);
+			}
+		}
+
+	    	
+	    	img{
+	    		vertical-align:text-bottom;
+	    		min-width:32px; 
+	    	}
+		.btn-primary{
+			background-color:#d5cab8;
+			border-color:#d5cab8;
+			border-radius: 22px;
+
+
+
+		}
+		input{
+		color: white;
+		font-size: 2.8rem;
+			@media screen and (max-width: 375px){
+				font-size: 2.5rem;
+			}
+	    padding-top: 3rem;
+	    padding-bottom: 3rem;
+	    padding-left:0;
+	    /* line-height: 6rem; */
+	    /* border: 1px solid red; */
+	    border: none;
+	    background-color: transparent;
+	    color: white;
+	    border-bottom: solid 1px;
+	    border-radius: 0;
+	    box-shadow: none;
+	     border-color: rgba(255, 255, 255, 0.2);
+	        //@media screen and (min-width: 768px){background-color:red}
+		   
+			 	@include input-ph{color: white;}
+			 	
+			}
+		
+		}
+	}
+//Navbar
+	.navbar{
+		height: 150px;
+		background-color: initial;
+		border: inital;
+
+	}
+

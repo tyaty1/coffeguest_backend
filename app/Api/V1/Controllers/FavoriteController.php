@@ -14,5 +14,5 @@ use Dingo\Api\Routing\Helpers;
 
 class RevireContrller extends Controller
 {
-
+	
 }

@@ -1,0 +1,29 @@
+.navbar-default {
+    background-color: initial;
+    border: initial;
+    min-height: 150px;
+
+    .btn{
+    	background-color: #d5cab8;
+	    border: #d5cab8 solid 1px;
+	    border-radius: 15px;
+	    /* height: 42px; */
+	    padding: {
+	    	top:10px;
+	    	bottom: 10px;
+	    	left:20px;
+	    	right: 20px;
+	    }
+	    margin: {
+	    	left:20px;
+	    	top:60px;
+	    }
+	    border-radius: 23px;
+    	@media screen and (min-width: 768px){
+
+    	}
+    	@media screen and (max-width: 767px){
+    		
+    	}
+    }
+}

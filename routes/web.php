@@ -14,11 +14,26 @@
 Route::get('reset_password/{token}', ['as' => 'password.reset', function($token)
 {
     // implement your reset password route here!
+    //dd($token);
+        return view('auth.passwords.rest_reset')->with(['token' => $token]);
+
+    
+    
+
+
+
 }]);
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+Route::get('/', function () {
+    return view('temp');
 });
+Route::get('blade', function () {
+    return view('page');
+});
+
 Route::get('/api/auth/facebook/', '\\App\\Api\\V1\\Controllers\\FacebookController@fb_authorize');
 /*
 Route::get('facebook/authorize', function() {
@@ -45,3 +60,15 @@ Route::get('facebook/login', function() {
 
 	return response()->json($details);   	   
 });*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/p/{cid}', 'ProfileController@index')->name('p');
+//Route::get('files/{file}/preview', ['as' => 'file_preview', 'uses' => 'FilesController@preview']);
+Route::get('/image/{id}', '\\App\\Api\\V1\\Controllers\\ImagesController@http_image_secure' );
+
+Route::get('reset_a/', function(){
+    return view('auth.passwords.rest_reset');
+});
+

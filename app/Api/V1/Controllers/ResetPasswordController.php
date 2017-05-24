@@ -6,6 +6,7 @@ use Config;
 use App\User;
 use Tymon\JWTAuth\JWTAuth;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use App\Api\V1\Requests\ResetPasswordRequest;
 use Symfony\Component\HttpKernel\Exception\HttpException;

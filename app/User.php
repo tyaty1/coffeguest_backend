@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','in_geo_latitude','in_geo_longitude','in_cafe_id','avatar','facebook_id'
+        'name', 'email','address', 'password','notifications_enabled','linked_to_facebook','in_geo_latitude','in_geo_longitude','in_cafe_id','avatar_id','facebook_id','sex','birth_date'
     ];
 
     /**
@@ -44,5 +44,14 @@ class User extends Authenticatable
     public function reviews(){
         return $this->hasMany('App\Review');
     }
+    public function images(){
+        return $this->hasMany('App\Image');
+    }
+    public function roles(){
+        return $this->belongsToMany('App/Role','user_roles');
+
+    }
+
+
 
 }

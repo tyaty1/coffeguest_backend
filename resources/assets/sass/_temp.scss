@@ -1,0 +1,34 @@
+.temp{
+	font-family:"Open Sans",sans-serif;
+	color: #FFFFFF;
+
+		@media only screen and (max-width: 767px){
+			    text-align: center;
+	    
+	}
+
+		@media only screen and (min-width: 768px){
+		margin-top: 22.5%;
+		}
+		@media only screen and (min-width: 1600px){
+			margin-top: 360px;
+		}
+		img{
+			margin: auto;
+		}
+
+	.title-a {
+	    //font-size: 5.4rem;
+	    @include flex-font(1600,54);
+
+	}
+	.paragraph-a {
+	    @include flex-font(1600,72);
+	    	   // @include flex-font(640,55);
+
+	}
+
+	.paragraph-b {
+	    @include flex-font(1600,65);
+}
+}
